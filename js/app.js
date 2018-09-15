@@ -1,23 +1,31 @@
-     class Hello extends React.Component {
-       render() {
-        var styles = {color: this.props.color};
-        return <h1><a href={this.props.link} style={styles}>{this.props.title}</a></h1>
-       }
-     }
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {count: 4};
 
-     const HelloFactory = React.createFactory(Hello);
+    this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
+  }
 
-     class App extends React.Component {
-       render() {
-        return (
-          <div>
-            <Hello title="Google" link="https://google.com" color="hotpink" />
-            <Hello title="Instagram" link="https://instagram.com" color="rgba(0, 0, 255, 0.3)"/>
-            <Hello title="Twitter" link="https://twitter.com" color="#e5c6ba" />
-          </div>
-          )
-       }
-     }
+  increment() {
+    this.setState({count: this.state.count + 1});
+  }
 
+  decrement() {
+     this.state.count > 0 && this.setState({count: this.state.count -  1});
+  }
+
+  render() {
+    return (
+      <div>
+      <h1>Vous avez {this.state.count} copines.</h1>
+      <button onClick={this.increment}>J'ai une nouvelle copine</button>
+      <button onClick={this.decrement}>J'ai perdu une copine</button>
+      </div>
       
-     ReactDOM.render(<App />, document.querySelector('#root'));
+      )
+   }
+}
+
+
+ReactDOM.render(<Counter />, document.querySelector('#root'))
