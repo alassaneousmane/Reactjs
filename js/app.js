@@ -1,31 +1,33 @@
-class Counter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {count: 0};
-
-    this.increment = this.increment.bind(this);
-    this.decrement = this.decrement.bind(this);
-  }
-
-  increment() {
-    this.setState({count: this.state.count + 1});
-  }
-
-  decrement() {
-     this.state.count > 0 && this.setState({count: this.state.count -  1});
-  }
-
+class TaskList extends React.Component {
   render() {
-    return (
+    
+    const tasks = [
+    {
+      id: 1,
+      description: 'Go to bed',
+      complete: true
+    },
+    {
+      id: 2,
+      description: 'record a tutorial',
+      complete: false
+    },
+    {
+      id: 3,
+      description: 'Watch a movie',
+      complete: false
+    },
+    
+    ];
+
+    return(
       <div>
-      <h1>Vous avez {this.state.count} copines.</h1>
-      <button onClick={this.increment}>J'ai une nouvelle copine</button>
-      <button onClick={this.decrement}>J'ai perdu une copine</button>
+      <h1>All tasks</h1>
       </div>
-      
       )
-   }
+  }
+
 }
 
 
-ReactDOM.render(<Counter />, document.querySelector('#root'))
+ReactDOM.render(<TaskList />, document.querySelector('#root'))
