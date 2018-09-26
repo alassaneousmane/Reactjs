@@ -18,6 +18,21 @@ class TaskList extends React.Component {
           id: 3,
           description: 'Watch a movie',
           complete: false
+        },
+        {
+          id: 4,
+          description: 'Oceana Workspaces and Channels',
+          complete: true
+        },
+        {
+          id: 5,
+          description: 'Complete Lab Oceana',
+          complete: false
+        },
+        {
+          id: 6,
+          description: 'Migrate Oceana 3.4.0.1 ==> Oceana 3.5',
+          complete: false
         }
     ]
   
