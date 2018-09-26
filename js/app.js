@@ -33,6 +33,16 @@ class TaskList extends React.Component {
           id: 6,
           description: 'Migrate Oceana 3.4.0.1 ==> Oceana 3.5',
           complete: false
+        },
+         {
+          id: 7,
+          description: 'Larabel Training',
+          complete: false
+        },
+         {
+          id: 8,
+          description: 'ReactJs and ReactNative Traing',
+          complete: false
         }
     ]
   
