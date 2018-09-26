@@ -58,10 +58,10 @@ class TaskList extends React.Component {
             // map(task, index) => on récupère l"élément et son index : index 0, index 1, index 2
             return (
               <article key={index}>
-                <h1>
+                <h3>
                   #{task.id} - {task.description} 
                   { task.complete ? ' ✅ ' : ' ❌' }
-                  </h1>
+                  </h3>
               </article>
               )
           })}
