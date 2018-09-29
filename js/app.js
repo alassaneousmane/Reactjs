@@ -11,7 +11,7 @@ class TaskList extends React.Component {
         },
         {
           id: 2,
-          description: 'record a tutorial',
+          description: 'Record a tutorial',
           complete: false
         },
         {
@@ -42,6 +42,16 @@ class TaskList extends React.Component {
          {
           id: 8,
           description: 'ReactJs and ReactNative Traing',
+          complete: false
+        },
+        {
+          id: 9,
+          description: 'Personal Development 1',
+          complete: false
+        },
+        {
+          id: 10,
+          description: 'Personal Development 2',
           complete: false
         }
     ]
